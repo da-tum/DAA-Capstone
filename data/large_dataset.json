@@ -1,0 +1,38 @@
+{
+  "depot": "Depot",
+  "vehicle_capacity": 45,
+  "edges": [
+    ["Depot", "Hub1", 5],
+    ["Depot", "Hub2", 8],
+    ["Depot", "Hub3", 12],
+    ["Hub1", "Hub2", 3],
+    ["Hub1", "Hub4", 7],
+    ["Hub2", "Hub5", 6],
+    ["Hub3", "Hub5", 4],
+    ["Hub3", "Hub6", 5],
+    ["Hub4", "Hub7", 4],
+    ["Hub5", "Hub7", 3],
+    ["Hub5", "Hub8", 6],
+    ["Hub6", "Hub8", 4],
+    ["Hub7", "Hub9", 5],
+    ["Hub8", "Hub9", 3]
+  ],
+  "parcels": [
+    {"parcel_id": "P201", "destination": "Hub1", "weight": 6, "value": 65, "deadline": 2, "priority": 5},
+    {"parcel_id": "P202", "destination": "Hub2", "weight": 4, "value": 45, "deadline": 3, "priority": 4},
+    {"parcel_id": "P203", "destination": "Hub3", "weight": 8, "value": 85, "deadline": 4, "priority": 5},
+    {"parcel_id": "P204", "destination": "Hub4", "weight": 5, "value": 50, "deadline": 2, "priority": 3},
+    {"parcel_id": "P205", "destination": "Hub5", "weight": 7, "value": 80, "deadline": 1, "priority": 5},
+    {"parcel_id": "P206", "destination": "Hub6", "weight": 3, "value": 35, "deadline": 5, "priority": 2},
+    {"parcel_id": "P207", "destination": "Hub7", "weight": 9, "value": 95, "deadline": 3, "priority": 5},
+    {"parcel_id": "P208", "destination": "Hub8", "weight": 6, "value": 70, "deadline": 4, "priority": 4},
+    {"parcel_id": "P209", "destination": "Hub9", "weight": 5, "value": 60, "deadline": 2, "priority": 4},
+    {"parcel_id": "P210", "destination": "Hub1", "weight": 4, "value": 30, "deadline": 6, "priority": 1},
+    {"parcel_id": "P211", "destination": "Hub4", "weight": 7, "value": 75, "deadline": 3, "priority": 4},
+    {"parcel_id": "P212", "destination": "Hub7", "weight": 3, "value": 40, "deadline": 1, "priority": 5},
+    {"parcel_id": "P213", "destination": "Hub8", "weight": 8, "value": 90, "deadline": 2, "priority": 5},
+    {"parcel_id": "P214", "destination": "Hub9", "weight": 4, "value": 42, "deadline": 5, "priority": 3},
+    {"parcel_id": "P215", "destination": "Hub3", "weight": 6, "value": 58, "deadline": 4, "priority": 3}
+  ]
+}
+
