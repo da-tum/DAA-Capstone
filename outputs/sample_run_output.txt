@@ -1,0 +1,45 @@
+================================================================
+MINI-COURIER PLANNER — EXECUTION REPORT
+Dataset: C:\Users\USER\Desktop\Extras\da-tum\DAA-Capstone\data\small_dataset.json | Depot: Depot | Capacity: 15 kg
+================================================================
+
+[Phase 2A] Prioritized Parcels via Merge Sort (0.0370 ms):
+ID      Dest           Wt   Val  Deadline  Priority
+P105    SectorE         2    20         1         4
+P101    SectorA         4    40         2         5
+P103    SectorB         3    25         2         3
+P107    SectorE         5    60         3         5
+P102    SectorC         5    55         3         4
+P104    SectorD         6    70         4         5
+P106    SectorC         4    35         5         2
+
+[Phase 2B] 0/1 Knapsack Packing Plan (0.0493 ms):
+Selected 3/7 parcels | Total Weight: 15/15 kg | Max Value: 170
+  - P101 -> SectorA (wt=4, val=40, deadline=2h)
+  - P107 -> SectorE (wt=5, val=60, deadline=3h)
+  - P104 -> SectorD (wt=6, val=70, deadline=4h)
+
+DP Table (rows = items 0..n, cols = capacity 0..W):
+  i=0:   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+  i=1:   0   0  20  20  20  20  20  20  20  20  20  20  20  20  20  20
+  i=2:   0   0  20  20  40  40  60  60  60  60  60  60  60  60  60  60
+  i=3:   0   0  20  25  40  45  60  65  65  85  85  85  85  85  85  85
+  i=4:   0   0  20  25  40  60  60  80  85 100 105 120 125 125 145 145
+  i=5:   0   0  20  25  40  60  60  80  85 100 115 120 135 140 155 160
+  i=6:   0   0  20  25  40  60  70  80  90 100 115 130 135 150 155 170
+  i=7:   0   0  20  25  40  60  70  80  90 100 115 130 135 150 155 170
+
+[Phase 3A] Dijkstra Shortest Paths from Depot (0.0414 ms):
+  Depot -> SectorA    dist=   4  path: Depot -> SectorA
+  Depot -> SectorB    dist=   6  path: Depot -> SectorA -> SectorB
+  Depot -> SectorC    dist=   9  path: Depot -> SectorA -> SectorC
+  Depot -> SectorD    dist=   9  path: Depot -> SectorA -> SectorB -> SectorD
+  Depot -> SectorE    dist=  13  path: Depot -> SectorA -> SectorB -> SectorD -> SectorE
+
+[Phase 3B] Nearest-Neighbor TSP Delivery Route (0.0978 ms):
+  Tour: Depot -> SectorA -> SectorD -> SectorE -> Depot
+  Total Route Distance: 26 km
+    Leg Depot -> SectorA (4 km): Depot -> SectorA
+    Leg SectorA -> SectorD (5 km): SectorA -> SectorB -> SectorD
+    Leg SectorD -> SectorE (4 km): SectorD -> SectorE
+    Leg SectorE -> Depot (13 km): SectorE -> SectorD -> SectorB -> SectorA -> Depot
