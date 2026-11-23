@@ -1,0 +1,24 @@
+{
+  "depot": "Depot",
+  "vehicle_capacity": 15,
+  "edges": [
+    ["Depot", "SectorA", 4],
+    ["Depot", "SectorB", 7],
+    ["SectorA", "SectorB", 2],
+    ["SectorA", "SectorC", 5],
+    ["SectorB", "SectorD", 3],
+    ["SectorC", "SectorD", 2],
+    ["SectorC", "SectorE", 6],
+    ["SectorD", "SectorE", 4]
+  ],
+  "parcels": [
+    {"parcel_id": "P101", "destination": "SectorA", "weight": 4, "value": 40, "deadline": 2, "priority": 5},
+    {"parcel_id": "P102", "destination": "SectorC", "weight": 5, "value": 55, "deadline": 3, "priority": 4},
+    {"parcel_id": "P103", "destination": "SectorB", "weight": 3, "value": 25, "deadline": 2, "priority": 3},
+    {"parcel_id": "P104", "destination": "SectorD", "weight": 6, "value": 70, "deadline": 4, "priority": 5},
+    {"parcel_id": "P105", "destination": "SectorE", "weight": 2, "value": 20, "deadline": 1, "priority": 4},
+    {"parcel_id": "P106", "destination": "SectorC", "weight": 4, "value": 35, "deadline": 5, "priority": 2},
+    {"parcel_id": "P107", "destination": "SectorE", "weight": 5, "value": 60, "deadline": 3, "priority": 5}
+  ]
+}
+
