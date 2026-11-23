@@ -5,7 +5,6 @@
 | **Course Title & Code** | Design & Analysis of Algorithms (`ETCCDA302`) |
 | **CO Mapping** | `CO1`, `CO2`, `CO3`, `CO4` (`L5: Create/Evaluate`) |
 | **Programme** | B.Tech CSE & Specializations |
-| **Faculty** | Dr. Shweta Agarwal |
 | **Student Name** | Harsh Dev Jha |
 | **Roll Number** | `2501010168` |
 | **Submission Mode** | Zosima / GitHub Repository |
